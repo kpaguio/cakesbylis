@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="    viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/login-style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+	<link rel="stylesheet" href="css/main-template.css">
+	<link rel="stylesheet" href="css/footer-fixed.css">
+
+    <title>Login System</title>
+</head>
+<body>
+<style>
+background-color:#dba77c
+
+	  h6{
+		font-size:14px;
+		}
+	h5{
+		font-size:14px;
+	}
+
+</style>
+<div id="header"></div>
+<div class = "login-form">
+    <div class = "center" style="padding:20px; background-color:#fddacd;">
+		<h1>Login</h1>
+  		<div class="form-group" style="padding:20px;">
+    				<label style="color:black">Email</label> <br> 
+				    <input type="email" class="form-control" placeholder="Please Enter your Email" id="email"><br>
+				    
+			</div>
+  		<div class="form-group" style="padding:20px; margin-top:-60px;">
+    				<label style="color:black">Password</label> <br>
+				        <input type="password" class="form-control" placeholder="Please Enter your Password" id="password"><br>
+			</div> <br>
+			<div class="form-group" style="padding:20px; margin-top:-100px;">
+<br>
+    		<button onclick="signIn()" id="signIp" class="btn btn-info btn-lg btn-block">Log In</button> </div>
+
+<a href="#forgotPassword" data-toggle="modal" data-target="#myModal" style="padding-left:20px;">Forgot Password</a>
+ <!--  <a href="#signUp" data-toggle="modal" data-target="#myModal1" style="padding-left:150px;">Sign Up</a>-->
+ </div>
+
+</div>
+</div>
+	<a id="ToSModalLink" href="ToSModal.html" data-toggle="modal" data-target="#ToSModal"></a>
+	<div id="ToSModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+	    <div class="modal-dialog modal-xl">
+	        <div class="modal-content">
+	        </div>
+	    </div>
+	</div>
+	<div id="ToSModal2" class="modal fade" data-backdrop="static" data-keyboard="false">
+	    <div class="modal-dialog modal-xl">
+	        <div class="modal-content">
+	        </div>
+	    </div>
+	</div>
+	<!--  <script src="js/ToSCheck.js"></script> -->
+</body>
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Forgot Password</h4>
+        </div>
+        <div class="modal-body">
+          <p>Contact your Administrator to change the Password.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-sm" style="width:30%">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+             <label style="color:black">Please Enter Your Email</label> <br> 
+			<input type="email" class="form-control" placeholder="Please Enter your Email" id="email1"><br>
+    		<label style="color:black">Please Enter Password</label> <br>
+    		<label style="color:gray">Password should be at least 6 Characters</label> <br>
+			<input type="password" class="form-control" placeholder="Please Enter your Password" id="password1"><br>
+			<!-- <button onclick="signUp()" id="signIp" class="btn btn-info btn-lg btn-block">Sign Up</button> </div>  -->
+        
+        <div class="modal-footer">
+        	<button  onclick="signUp()" id="signIp" class="btn btn-info data-dismiss="modal">Sign Up</button>
+          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+
+ <script>  
+        $(function(){ 
+          $("#header").load("header.jsp");  
+         
+        }); 
+        </script>  
+
+
+<script src = "js/login-client.js"></script>
+
+
